@@ -71,11 +71,16 @@ pip install Flask tensorflow nltk numpy pickle-mixin
 
 --------------------------------------------------------------------------------------------------
 
-**Step 5: Create Project Files**
+# Step 5: Create Project Files
+
+> [!NOTE]
+> Above I have provided all the files download them or just .git clone this reporsitory below are the explanation of each part of the code.
+
 
 Now you will create the necessary files for your project.
+1. Create intents.json (Data File):
 
-1. Create intents.json (Data File): This file contains the training data for your chatbot, including possible user inputs and corresponding bot responses.
+This file contains the training data for your chatbot, including possible user inputs and corresponding bot responses. There is nothing much to explain, I feel this part is self explanatory, As you wish you can keep on adding more data, remember everytime you add new set of data make sure to save the indent file them train the data (This step is discussed below)
 
 ```json
 {
