@@ -73,10 +73,6 @@ pip install Flask tensorflow nltk numpy pickle-mixin
 
 # Step 5: Create Project Files
 
-> [!NOTE]
-> Above I have provided all the files download them or just .git clone this reporsitory below are the explanation of each part of the code.
-
-
 Now you will create the necessary files for your project.
 1. Create intents.json (Data File):
 
