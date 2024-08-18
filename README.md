@@ -1,7 +1,10 @@
 # Mental-Health-ChatBot
 This Mental Health ChatBot is a web-based application designed to assist users by providing supportive and empathetic responses related to mental health. The chatbot uses Natural Language Processing (NLP) techniques to understand and respond to user inputs, aiming to offer guidance, comfort, and general information about mental well-being.
 
-[Watch the video on YouTube](https://www.youtube.com/watch?v=4mfni4whdJQ)
+[Showcase video on YouTube](https://www.youtube.com/watch?v=4mfni4whdJQ)
+
+or
 
 
-[Watch the video ](https://github.com/pranavvss/Mental-Health-ChatBot/blob/main/Chatbot%20-%20Made%20with%20Clipchamp.mp4)
+https://github.com/user-attachments/assets/861bdd60-329d-48c0-a076-c28e5e969b90
+
