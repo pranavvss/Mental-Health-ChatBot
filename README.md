@@ -117,7 +117,7 @@ This file contains the training data for your chatbot, including possible user i
 >[!NOTE]
 > According to your wish you can add more data, But everytime to add another set of data youll have to retrain the whole data (In upcoming steps ill mention how to train data).
 
-**Just a glimpse (After adding another set of data in indents.json youll have to run train_chatbot.py to train the new model. **
+**Just a glimpse (After adding another set of data in intents.json youll have to run train_chatbot.py to train the new model. **
 
 ![Screenshot 2024-08-19 020429](https://github.com/user-attachments/assets/fae76fdd-a1d7-459e-8601-ad075b8da632)
 
