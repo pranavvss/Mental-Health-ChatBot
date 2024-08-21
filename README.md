@@ -6,10 +6,12 @@ This Mental Health ChatBot is a web-based application designed to assist users b
 ## Change Logs- July
 
 1. Trained the bot on more advance dataset it replies to a lot of new prompts now
+  (I am gathering large data sets, and currently I am fine-tuning the data using tensorflow, I am considering fine tuning as in this process ill learn all these concepts, otherwise if anyone is planning to build a similar chat app i would recommend a pre-trained model like GPT 2 using open AI api key.
+
 2. Added a option to create new chats, old chats gets saved!
-3. Added Session history system, chats are stored in terms of session in sidebar
-4. Added a feature to delete pre existing Sessions
-5. Added a feature to edit a sent text
+4. Added Session history system, chats are stored in terms of session in sidebar
+5. Added a feature to delete pre existing Sessions
+6. Added a feature to edit a sent text
 
 https://github.com/user-attachments/assets/6b8da763-715c-443e-9cac-178995852429
 
