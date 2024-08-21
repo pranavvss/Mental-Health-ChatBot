@@ -1,3 +1,5 @@
+# Example of intents, you can add as much intents you want, later train them using training.py i provided, this is one way, another way is to fine tune a pre trained dataset.
+
 {
   "intents": [
     {
