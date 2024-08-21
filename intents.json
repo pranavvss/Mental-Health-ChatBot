@@ -1,4 +1,4 @@
-# Example of intents, you can add as much intents you want, later train them using training.py i provided, this is one way, another way is to fine tune a pre trained dataset.
+# Example of intents, you can add as much intents you want, later train them using training.py i provided, this is one way, another way is to fine tune a dataset or third way is to use a pre-trained model like GPT2 which you can connect to your webapp using openAI API
 
 {
   "intents": [
