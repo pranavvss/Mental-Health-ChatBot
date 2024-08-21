@@ -11,6 +11,7 @@ This Mental Health ChatBot is a web-based application designed to assist users b
 4. Added a feature to delete pre existing Sessions
 5. Added a feature to edit a sent text
 
+https://github.com/user-attachments/assets/6b8da763-715c-443e-9cac-178995852429
 
 --------------------------------------------------------------------------------------------------
 
