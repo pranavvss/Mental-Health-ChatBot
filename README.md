@@ -5,15 +5,11 @@ This Mental Health ChatBot is a web-based application designed to assist users b
 
 ## Change Logs- July
 
-1. Trained the bot on more advance dataset it replies a lot of new prompts now
+1. Trained the bot on more advance dataset it replies to a lot of new prompts now
 2. Added a option to create new chats, old chats gets saved!
 3. Added Session history system, chats are stored in terms of session in sidebar
 4. Added a feature to delete pre existing Sessions
 5. Added a feature to edit a sent text
-
-https://github.com/user-attachments/assets/74c9d4a0-7470-4228-bca4-5a123e4b667f
-
-https://github.com/user-attachments/assets/fe39e9be-1ecb-4636-9064-b7b86a2a00f8
 
 
 --------------------------------------------------------------------------------------------------
