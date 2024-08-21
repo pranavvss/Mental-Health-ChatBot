@@ -5,9 +5,11 @@ This Mental Health ChatBot is a web-based application designed to assist users b
 
 **Change Logs-**
 
-**1. Added a option to create new chats, old chats gets saved!
-2. Added Session history system, chats are stored in terms of session
-3. Added a side bar**
+**1. Added a option to create new chats, old chats gets saved!**
+
+**2. Added Session history system, chats are stored in terms of session.**
+
+**3. Added a side bar.**
 
 video - 
 
