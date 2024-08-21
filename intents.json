@@ -1,0 +1,72 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Greetings", "What's up?", "Good day"],
+      "responses": ["Hello!", "Hi there!", "Greetings!", "Hey! How can I assist you today?"],
+      "context_set": ""
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye", "Take care"],
+      "responses": ["Goodbye!", "Take care!", "See you soon!", "Have a great day!"],
+      "context_set": ""
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thank you", "Thanks", "I appreciate it", "That's helpful"],
+      "responses": ["You're welcome!", "No problem!", "Happy to help!", "Anytime!"],
+      "context_set": ""
+    },
+    {
+      "tag": "mental_health",
+      "patterns": [
+        "I feel sad",
+        "I'm depressed",
+        "I'm anxious",
+        "I have anxiety",
+        "I'm feeling low",
+        "I don't feel good",
+        "I'm not okay"
+      ],
+      "responses": [
+        "I'm sorry you're feeling this way. How can I assist you?",
+        "It's okay to feel like this sometimes. I'm here for you.",
+        "Please tell me more about how you're feeling. I'm here to listen.",
+        "I'm sorry to hear that. Do you want to talk about it?"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "help_depression",
+      "patterns": [
+        "How can someone feel better or fix depression?",
+        "What can I do if I'm feeling depressed?",
+        "How can I overcome depression?",
+        "What should I do when I'm feeling down?",
+        "Can you help me with depression?"
+      ],
+      "responses": [
+        "There are many ways to address depression. Talking to someone, engaging in activities you enjoy, or seeking professional help can be very beneficial.",
+        "Exercise, spending time with loved ones, and focusing on self-care are great ways to start feeling better.",
+        "It's important to talk to a mental health professional if you're feeling overwhelmed. They can provide the support you need."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "self_help_tips",
+      "patterns": [
+        "What are some self-help tips?",
+        "Can you give me advice on how to feel better?",
+        "How can I manage my emotions better?",
+        "What can I do to improve my mental health?"
+      ],
+      "responses": [
+        "Practicing mindfulness, engaging in regular exercise, and maintaining a balanced diet can improve your mental health.",
+        "Try to establish a routine, get enough sleep, and stay connected with your friends and family.",
+        "Remember to take breaks and do things that you enjoy. Self-care is essential."
+      ],
+      "context_set": ""
+    }
+  ]
+}
