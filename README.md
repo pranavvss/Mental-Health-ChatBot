@@ -1,13 +1,10 @@
-# Mental-Health-ChatBot
 This Mental Health ChatBot is a web-based application designed to assist users by providing supportive and empathetic responses related to mental health. The chatbot uses Natural Language Processing (NLP) techniques to understand and respond to user inputs, aiming to offer guidance, comfort, and general information about mental well-being.
 
 --------------------------------------------------------------------------------------------------
 
-## Change Logs- July
+### Change Logs- July
 
-1. Trained the bot on more advance dataset it replies to a lot of new prompts now
-  (I am gathering large data sets, and currently I am fine-tuning the data using tensorflow, I am considering fine tuning as in this process ill learn all these concepts, otherwise if anyone is planning to build a similar chat app i would recommend a pre-trained model like GPT 2 using open AI api key.
-
+1. Trained the bot on more advance dataset it replies to a lot of new prompts now - I am gathering large data sets, and currently I am fine-tuning the data using tensorflow, I am considering fine tuning as in this process ill learn all these concepts, otherwise if anyone is planning to build a similar chat app i would recommend a pre-trained model like GPT 2 using open AI api key.
 2. Added a option to create new chats, old chats gets saved!
 4. Added Session history system, chats are stored in terms of session in sidebar
 5. Added a feature to delete pre existing Sessions
@@ -17,7 +14,7 @@ https://github.com/user-attachments/assets/6b8da763-715c-443e-9cac-178995852429
 
 --------------------------------------------------------------------------------------------------
 
-## old video
+### old video
 
 https://github.com/user-attachments/assets/048d2391-13d1-47a9-8ea0-241420356ece
 
