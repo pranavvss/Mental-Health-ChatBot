@@ -1,6 +1,6 @@
 This Mental Health ChatBot is a web-based application designed to assist users by providing supportive and empathetic responses related to mental health. The chatbot uses Natural Language Processing (NLP) techniques to understand and respond to user inputs, aiming to offer guidance, comfort, and general information about mental well-being. I am gathering large data sets, and currently I am fine-tuning the data using tensorflow, I am considering fine tuning as in this process ill learn all these concepts, otherwise if anyone is planning to build a similar chat app i would recommend a pre-trained model like GPT 2 using open AI api key.
 
-(Still under development)
+(Version 2 - Still under development)
 
 --------------------------------------------------------------------------------------------------
 
