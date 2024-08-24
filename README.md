@@ -1,16 +1,22 @@
-This Mental Health ChatBot is a web-based application designed to assist users by providing supportive and empathetic responses related to mental health. The chatbot uses Natural Language Processing (NLP) techniques to understand and respond to user inputs, aiming to offer guidance, comfort, and general information about mental well-being. I am gathering large data sets, and currently I am fine-tuning the data using tensorflow, I am considering fine tuning as in this process ill learn all these concepts, otherwise if anyone is planning to build a similar chat app i would recommend a pre-trained model like GPT 2 using open AI api key.
+## Overview (Version 2 - Still under development)
 
-(Version 2 - Still under development)
+This Mental Health ChatBot is a web-based application designed to assist users by providing supportive and empathetic responses related to mental health. The chatbot uses Natural Language Processing (NLP) techniques to understand and respond to user inputs, aiming to offer guidance, comfort, and general information about mental well-being. I am gathering large data sets, and currently fine-tuning the data using tensorflow, I am considering fine tuning as in this process ill learn all these concepts, otherwise if anyone is planning to build a similar chat app i would recommend using pre-trained model like GPT 2 using open AI api key.
+
+## Features
+
+- Real-time chat with NLP-based responses
+- Facial expression analysis for better emotion detection
+- Image upload and session history
 
 --------------------------------------------------------------------------------------------------
 
 ### Change Logs- August
 
-1. Trained the bot on more advance dataset it replies to a lot of new prompts now - 
+1. Trained the bot on a large Dataset, it replies to a lot of new prompts now.
 2. Added a option to create new chats, old chats gets saved!
-4. Added Session history system, chats are stored in terms of session in sidebar
-5. Added a feature to delete pre existing Sessions
-6. Added a feature to edit a sent text
+4. Added Session history system, chats are stored in terms of session in sidebar.
+5. Added a feature to delete pre existing Sessions.
+6. Added a feature to edit a sent text.
 
 https://github.com/user-attachments/assets/6b8da763-715c-443e-9cac-178995852429
 
@@ -24,45 +30,26 @@ https://github.com/user-attachments/assets/048d2391-13d1-47a9-8ea0-241420356ece
 
 **STEP BY STEP GUIDE **
 
-**Prerequisites**
+## Technologies Used
 
-Before you start, make sure you have the following installed on your machine:
+- **Languages**: Python, HTML/CSS
+- **Frameworks**: Flask, TensorFlow, Keras
+- **Libraries**: NLTK, OpenCV
+
+--------------------------------------------------------------------------------------------------
+
+### Prerequisites
 
 - Python 3.7 or higher
-- Visual Studio Code (VS Code) or another code editor of your choice.
-- Git (optional, but recommended for version control and cloning repositories)
+- [VS Code](https://code.visualstudio.com/)
 
 --------------------------------------------------------------------------------------------------
 
-**Step 1: Install Python**
+### Steps
 
-- Download Python: Go to the official Python website. Download the latest version compatible with your system.
-- Verify the installation : Open Command Prompt (Windows) or Terminal (Mac/Linux). Type python --version and press Enter. You should see the installed Python version number.
-
---------------------------------------------------------------------------------------------------
-
-**Step 2: Install Visual Studio Code (VS Code)**
-
-- Visit the official VS Code website. Download the version compatible with your operating system. Install VS Code
-- Open VS Code. Go to Extensions (or press Ctrl+Shift+X). Search for "Python" and install the Python extension provided by Microsoft.
-
---------------------------------------------------------------------------------------------------
-
-**Step 3: Set Up a Virtual Environment**
-
-- A virtual environment will help you isolates your Python projects, ensuring that dependencies for different projects don’t conflict.
-- Open VS Code and Terminal > Open the integrated terminal by selecting Terminal > New Terminal > Navigate to your project directory > If you haven't created a project folder yet, do so now and navigate to it:
-
-```
-mkdir mental-health-chatbot
-cd mental-health-chatbot
-```
-```
-python -m venv chatbot-env
-```
-```
-chatbot-env\Scripts\activate
-```
+1. Clone the repo: `git clone https://github.com/pranavvss/Mental-Health-ChatBot.git`
+2. Install dependencies: `pip install -r requirements.txt`
+3. Run the application: `python app.py`
 
 --------------------------------------------------------------------------------------------------
 
