@@ -10,7 +10,15 @@ This Mental Health ChatBot is a web-based application designed to assist users b
 
 --------------------------------------------------------------------------------------------------
 
-## Change Logs- August
+## Technologies Used
+
+- **Languages**: Python, HTML/CSS
+- **Frameworks**: Flask, TensorFlow, Keras
+- **Libraries**: NLTK, OpenCV
+
+--------------------------------------------------------------------------------------------------
+
+### Change Logs- August
 
 1. Trained the bot on a large Dataset, it replies to a lot of new prompts now.
 2. Added a option to create new chats, old chats gets saved!
@@ -30,14 +38,6 @@ https://github.com/user-attachments/assets/048d2391-13d1-47a9-8ea0-241420356ece
 
 **STEP BY STEP GUIDE**
 
-### Technologies Used
-
-- **Languages**: Python, HTML/CSS
-- **Frameworks**: Flask, TensorFlow, Keras
-- **Libraries**: NLTK, OpenCV
-
---------------------------------------------------------------------------------------------------
-
 ### Prerequisites
 
 - Python 3.7 or higher
@@ -45,7 +45,7 @@ https://github.com/user-attachments/assets/048d2391-13d1-47a9-8ea0-241420356ece
 
 --------------------------------------------------------------------------------------------------
 
-### Steps
+### Steps to Git Clone
 
 1. Clone the repo: `git clone https://github.com/pranavvss/Mental-Health-ChatBot.git`
 2. Install dependencies: `pip install -r requirements.txt`
@@ -53,7 +53,7 @@ https://github.com/user-attachments/assets/048d2391-13d1-47a9-8ea0-241420356ece
 
 --------------------------------------------------------------------------------------------------
 
-**Step 4: Install Required Libraries**
+**Install Required Libraries**
 
 You need several Python libraries to build the chatbot. Let’s install them
 
@@ -65,6 +65,10 @@ You need several Python libraries to build the chatbot. Let’s install them
 ```
 pip install Flask tensorflow nltk numpy pickle-mixin
 ```
+
+--------------------------------------------------------------------------------------------------
+
+### Explanation of the Code
 
 --------------------------------------------------------------------------------------------------
 
