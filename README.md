@@ -57,9 +57,9 @@ https://github.com/user-attachments/assets/048d2391-13d1-47a9-8ea0-241420356ece
 
 You need several Python libraries to build the chatbot. Let’s install them
 
-- [Read Documentation](https://flask.palletsprojects.com/_/downloads/en/1.1.x/pdf/) Install Flask: Flask is a lightweight web framework used to build web applications.
-- [Read Documentation](https://www.tensorflow.org/guide/basics) Install TensorFlow and Keras: TensorFlow is a machine learning framework. Keras is a high-level API for building and training neural networks, which comes as part of TensorFlow.
-- [Read Documentation](https://www.nltk.org/) Install NLTK (Natural Language Toolkit): NLTK is used for processing textual data.
+- Install Flask [Read Documentation](https://flask.palletsprojects.com/_/downloads/en/1.1.x/pdf/) : Flask is a lightweight web framework used to build web applications.
+- Install TensorFlow and Keras [Read Documentation](https://www.tensorflow.org/guide/basics) : TensorFlow is a machine learning framework. Keras is a high-level API for building and training neural networks, which comes as part of TensorFlow.
+- Install NLTK (Natural Language Toolkit) [Read Documentation](https://www.nltk.org/) : NLTK is used for processing textual data.
 - Install Other Dependencies: You will also need Numpy, Pickle, and other essential libraries.
   
 ```
