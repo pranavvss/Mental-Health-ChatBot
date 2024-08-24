@@ -28,9 +28,9 @@ https://github.com/user-attachments/assets/048d2391-13d1-47a9-8ea0-241420356ece
 
 --------------------------------------------------------------------------------------------------
 
-**STEP BY STEP GUIDE **
+**STEP BY STEP GUIDE**
 
-## Technologies Used
+### Technologies Used
 
 - **Languages**: Python, HTML/CSS
 - **Frameworks**: Flask, TensorFlow, Keras
