@@ -8,7 +8,6 @@ This Mental Health ChatBot is a web-based application designed to assist users b
 - Facial expression analysis for better emotion detection
 - Image upload and session history
 
---------------------------------------------------------------------------------------------------
 
 ## Technologies Used
 
@@ -28,15 +27,11 @@ This Mental Health ChatBot is a web-based application designed to assist users b
 
 https://github.com/user-attachments/assets/6b8da763-715c-443e-9cac-178995852429
 
---------------------------------------------------------------------------------------------------
-
 ### old video
 
 https://github.com/user-attachments/assets/048d2391-13d1-47a9-8ea0-241420356ece
 
 --------------------------------------------------------------------------------------------------
-
-**STEP BY STEP GUIDE**
 
 ### Prerequisites
 
