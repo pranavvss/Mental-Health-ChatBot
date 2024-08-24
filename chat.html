@@ -1,80 +1,298 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Mental Health ChatBot</title>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}"/>
-	</head>
-	
-	
-	<body>
-		<div class="container-fluid h-100">
-			<div class="row justify-content-center h-100">		
-				<div class="col-md-8 col-xl-6 chat">
-					<div class="card">
-						<div class="card-header msg_head">
-							<div class="d-flex bd-highlight">
-								<div class="img_cont">
-									<img src="https://i.ibb.co/fSNP7Rz/icons8-chatgpt-512.png" class="rounded-circle user_img">
-									<span class="online_icon"></span>
-								</div>
-								<div class="user_info">
-									<span>Mental Health ChatBot</span>
-									<p>Share with me! Whatever you want. I am here for you.</p>
-								</div>
-							</div>
-						</div>
-						<div id="messageFormeight" class="card-body msg_card_body">
-							
-							
-						</div>
-						<div class="card-footer">
-							<form id="messageArea" class="input-group">
-                                <input type="text" id="text" name="msg" placeholder="Type your message..." autocomplete="off" class="form-control type_msg" required/>
-								<div class="input-group-append">
-									<button type="submit" id="send" class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<script>
-			$(document).ready(function() {
-				$("#messageArea").on("submit", function(event) {
-					const date = new Date();
-					const hour = date.getHours();
-					const minute = date.getMinutes();
-					const str_time = hour+":"+minute;
-					var rawText = $("#text").val();
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health ChatBot</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container h-100">
+        <div class="d-flex justify-content-center h-100 align-items-center">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-xl-3 sidebar-container">
+                <div class="sidebar" id="sidebar">
+                    <ul id="chatHistory">
+                        <!-- Chat sessions will be dynamically added here -->
+                    </ul>
+                </div>
+            </div>
 
-					var userHtml = '<div class="d-flex justify-content-end mb-4"><div class="msg_cotainer_send">' + rawText + '<span class="msg_time_send">'+ str_time + '</span></div><div class="img_cont_msg"><img src="https://i.ibb.co/d5b84Xw/Untitled-design.png" class="rounded-circle user_img_msg"></div></div>';
-					
-					$("#text").val("");
-					$("#messageFormeight").append(userHtml);
+            <div class="col-md-8 col-xl-9 chat">
+                <div class="card">
+                    <div class="card-header msg_head">
+                        <div class="d-flex bd-highlight">
+                            <div class="img_cont">
+                                <img src="https://i.ibb.co/fSNP7Rz/icons8-chatgpt-512.png" class="rounded-circle user_img">
+                                <span class="online_icon"></span>
+                            </div>
+                            <div class="user_info">
+                                <span>Mental Health ChatBot</span>
+                                <p>Share with me! Whatever you want. I am here for you.</p>
+                            </div>
+                            <!-- Sidebar Toggle Button and New Chat Icon -->
+                            <div class="ml-auto d-flex align-items-center">
+                                <i id="newChatIcon" class="fas fa-comment-dots chat-icon"></i>
+                                <i class="fas fa-bars action_menu_btn"></i>
+                            </div>
+                        </div>
+                    </div>
 
-					$.ajax({
-						data: {
-							msg: rawText,	
-						},
-						type: "POST",
-						url: "/get",
-					}).done(function(data) {
-						var botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://i.ibb.co/fSNP7Rz/icons8-chatgpt-512.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">' + data + '<span class="msg_time">' + str_time + '</span></div></div>';
-						$("#messageFormeight").append($.parseHTML(botHtml));
-					});
-					event.preventDefault();
-				});
-			});
-		</script>
-        
-    </body>
+                    <div id="messageFormeight" class="card-body msg_card_body">
+                        <!-- Chat messages will go here -->
+                    </div>
+
+                    <div class="card-footer">
+                        <form id="messageArea" class="input-group" enctype="multipart/form-data">
+                            <input type="text" id="text" name="msg" placeholder="Type your message..." autocomplete="off" class="form-control type_msg" required/>
+                            <div class="input-group-append">
+                                <button type="button" id="uploadButton" class="input-group-text send_btn"><i class="fas fa-paperclip"></i></button>
+                                <input type="file" id="imageUpload" name="image" accept="image/*" style="display:none;"/>
+                                <button type="submit" id="send" class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let chatSessions = [];
+        let currentChatIndex = -1;
+
+        $(document).ready(function() {
+            $("#newChatIcon").click(function() {
+                startNewChat();
+            });
+
+            $(".action_menu_btn").click(function() {
+                $("#sidebar").toggle(); // Toggle the visibility of the sidebar
+            });
+
+            $("#uploadButton").click(function() {
+                $("#imageUpload").click(); // Trigger the hidden file input when the upload button is clicked
+            });
+
+            $("#messageArea").on("submit", function(event) {
+                event.preventDefault();
+                const date = new Date();
+                const hour = date.getHours();
+                const minute = date.getMinutes();
+                const str_time = hour + ":" + minute;
+                const rawText = $("#text").val();
+                const image = $("#imageUpload").prop("files")[0];
+
+                if (image) {
+                    // Handle image upload and analysis
+                    const formData = new FormData();
+                    formData.append("image", image);
+
+                    $.ajax({
+                        url: "/analyze-image",
+                        type: "POST",
+                        data: formData,
+                        contentType: false,
+                        processData: false,
+                        success: function(response) {
+                            const mood = response.mood;
+                            handleBotResponseBasedOnMood(mood, str_time);
+                        },
+                        error: function() {
+                            console.log("Image upload failed.");
+                        }
+                    });
+
+                    // Clear the file input
+                    $("#imageUpload").val("");
+                } else if (rawText) {
+                    handleUserMessage(rawText, str_time);
+                }
+            });
+
+            $(document).on("click", ".chat-session", function() {
+                const index = $(this).data("index");
+                loadChatSession(index);
+            });
+
+            $(document).on("click", ".delete-session", function(event) {
+                event.stopPropagation();
+                const index = $(this).closest('.chat-session').data('index');
+                deleteSession(index);
+            });
+        });
+
+        function handleUserMessage(rawText, str_time) {
+            if (currentChatIndex >= 0) {
+                if (chatSessions[currentChatIndex].messages.length === 0) {
+                    chatSessions[currentChatIndex].title = rawText;
+                    updateChatHistory();
+                }
+
+                chatSessions[currentChatIndex].messages.push({
+                    text: rawText,
+                    time: str_time,
+                    sender: 'user',
+                    edited: false
+                });
+
+                var userHtml = `
+                    <div class="message" data-index="${chatSessions[currentChatIndex].messages.length - 1}">
+                        <div class="msg_cotainer_send_container">
+                            <div class="msg_cotainer_send">${rawText}<span class="msg_time_send">${str_time}</span></div>
+                            <div class="edit_btn" onclick="handleEditMessage(${chatSessions[currentChatIndex].messages.length - 1})"><i class="fas fa-edit"></i></div>
+                        </div>
+                    </div>`;
+                $("#messageFormeight").append(userHtml);
+                
+                $("#text").val("");
+                
+                $.ajax({
+                    data: { msg: rawText },
+                    type: "POST",
+                    url: "/get",
+                }).done(function(data) {
+                    chatSessions[currentChatIndex].messages.push({
+                        text: data,
+                        time: str_time,
+                        sender: 'bot'
+                    });
+
+                    var botHtml = `
+                        <div class="message">
+                            <div class="msg_cotainer">${data}<span class="msg_time">${str_time}</span></div>
+                        </div>`;
+                    $("#messageFormeight").append($.parseHTML(botHtml));
+                });
+            }
+        }
+
+        function handleBotResponseBasedOnMood(mood, time) {
+            let botMessage = "";
+
+            switch(mood) {
+                case "happy":
+                    botMessage = "You look happy! How can I assist you today?";
+                    break;
+                case "sad":
+                    botMessage = "I'm sorry you're feeling down. Do you want to talk about it?";
+                    break;
+                default:
+                    botMessage = "I'm here for you. How can I assist you?";
+            }
+
+            chatSessions[currentChatIndex].messages.push({
+                text: botMessage,
+                time: time,
+                sender: 'bot'
+            });
+
+            var botHtml = `
+                <div class="message">
+                    <div class="msg_cotainer">${botMessage}<span class="msg_time">${time}</span></div>
+                </div>`;
+            $("#messageFormeight").append($.parseHTML(botHtml));
+        }
+
+        function startNewChat() {
+            const date = new Date();
+            const hour = date.getHours();
+            const minute = date.getMinutes();
+            const str_time = hour + ":" + minute;
+
+            currentChatIndex = chatSessions.length;
+            chatSessions.push({
+                title: "New Chat",
+                messages: [],
+                time: str_time
+            });
+
+            updateChatHistory();
+            $("#messageFormeight").empty();
+        }
+
+        function updateChatHistory() {
+            $("#chatHistory").empty();
+            chatSessions.forEach((session, index) => {
+                $("#chatHistory").append(`
+                    <li class="chat-session" data-index="${index}">
+                        ${session.title} (${session.time})
+                        <div class="delete-session"><i class="fas fa-trash"></i></div>
+                    </li>`);
+            });
+        }
+
+        function loadChatSession(index) {
+            currentChatIndex = index;
+            $("#messageFormeight").empty();
+            chatSessions[currentChatIndex].messages.forEach((msg, i) => {
+                let msgHtml;
+                if (msg.sender === 'user') {
+                    msgHtml = `
+                        <div class="message" data-index="${i}">
+                            <div class="msg_cotainer_send_container">
+                                <div class="msg_cotainer_send">${msg.text} <span class="msg_time_send">${msg.time}${msg.edited ? ' (edited)' : ''}</span></div>
+                                <div class="edit_btn" onclick="handleEditMessage(${i})"><i class="fas fa-edit"></i></div>
+                            </div>
+                        </div>`;
+                } else {
+                    msgHtml = `
+                        <div class="message">
+                            <div class="msg_cotainer">${msg.text} <span class="msg_time">${msg.time}</span></div>
+                        </div>`;
+                }
+                $("#messageFormeight").append(msgHtml);
+            });
+        }
+
+        function deleteSession(index) {
+            chatSessions.splice(index, 1);
+            updateChatHistory();
+            if (index === currentChatIndex) {
+                $("#messageFormeight").empty();
+                currentChatIndex = -1;
+            }
+        }
+
+        function handleEditMessage(messageIndex) {
+            const messageContainer = $(`.message[data-index=${messageIndex}]`);
+            const originalText = messageContainer.find('.msg_cotainer_send').text().trim();
+            const messageElement = messageContainer.find('.msg_cotainer_send');
+
+            messageElement.replaceWith(`
+                <div class="msg_cotainer_send_container edit_container">
+                    <input type="text" class="edit_input" value="${originalText}" style="width: calc(100% - 100px);"/>
+                    <button class="save_edit">Send</button>
+                    <button class="cancel_edit">Cancel</button>
+                </div>
+            `);
+
+            $('.edit_input').focus();
+
+            $('.save_edit').on('click', function () {
+                const editedText = $(this).siblings('.edit_input').val();
+                const timestamp = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+                messageContainer.html(`
+                    <div class="msg_cotainer_send">${editedText} <span class="msg_time_send">${timestamp} <em>(edited)</em></span></div>
+                    <div class="edit_btn" onclick="handleEditMessage(${messageIndex})"><i class="fas fa-edit"></i></div>
+                `);
+
+                chatSessions[currentChatIndex].messages[messageIndex].text = editedText;
+                chatSessions[currentChatIndex].messages[messageIndex].time = timestamp;
+                chatSessions[currentChatIndex].messages[messageIndex].edited = true;
+            });
+
+            $('.cancel_edit').on('click', function () {
+                messageContainer.html(`
+                    <div class="msg_cotainer_send">${originalText} <span class="msg_time_send">${messageContainer.find('.msg_time_send').text()}</span></div>
+                    <div class="edit_btn" onclick="handleEditMessage(${messageIndex})"><i class="fas fa-edit"></i></div>
+                `);
+            });
+        }
+    </script>
+</body>
 </html>
